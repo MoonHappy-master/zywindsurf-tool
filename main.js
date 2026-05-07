@@ -494,8 +494,8 @@ ipcMain.handle('batch-get-all-tokens', async (event) => {
     let successCount = 0;
     let failCount = 0;
 
-    // ========== 并发池：最多同时 20 个登录窗口 ==========
-    const CONCURRENCY = 20;
+    // ========== 并发池：最多同时 5 个登录窗口 ==========
+    const CONCURRENCY = 5;
     let processed = 0; // 已完成（成功+失败）的账号数
     let nextIndex = 0; // 下一个待处理的索引
 

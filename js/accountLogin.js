@@ -225,7 +225,7 @@ class AccountLogin {
 
     // 等待页面跳转（离开登录页 = 登录成功）
     var loggedIn = false;
-    for (var i = 0; i < 60; i++) {
+    for (var i = 0; i < 90; i++) {
       await this._sleep(1000);
       var currentUrl = win.webContents.getURL();
       if (!currentUrl.includes('/account/login')) {
@@ -241,7 +241,7 @@ class AccountLogin {
     }
 
     if (!loggedIn) {
-      throw new Error('登录超时（60秒），页面未跳转，请检查账号密码');
+      throw new Error('登录超时（90秒），页面未跳转，请检查账号密码');
     }
 
     // 等待 profile 页面完全加载（页面会自动调用 _backend API，webRequest 会捕获 headers）
