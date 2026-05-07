@@ -4236,7 +4236,7 @@ async function batchGetAllTokens() {
     const subParts = [];
     if (preview.skipCount > 0) subParts.push(`${preview.skipCount} 个 Token 仍有效，将跳过`);
     if (preview.noCredsCount > 0) subParts.push(`${preview.noCredsCount} 个无密码，将跳过`);
-    subParts.push('最多同时 20 个并发登录');
+    subParts.push('最多同时 5 个并发登录');
 
     const confirmed = await showCustomConfirm({
       title: '获取 Token 确认',
