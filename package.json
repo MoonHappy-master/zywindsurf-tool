@@ -238,6 +238,7 @@
     "compression": "normal",
     "buildDependenciesFromSource": false,
     "nodeGypRebuild": false,
+    "npmRebuild": false,
     "directories": {
       "output": "release",
       "buildResources": "build"
